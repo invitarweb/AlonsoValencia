@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="googlebot" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi XV Alonso Valencia</title>
+
+    <meta property="og:title" content="Mi XV Alonso Valencia">
+    <meta property="og:description" content="¡Te invito a celebrar conmigo este día tan especial!">
+    <meta property="og:image" content="https://invitarweb.github.io/AlonsoValencia/f.png">
+    <meta property="og:url" content="https://invitarweb.github.io/AlonsoValencia">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Poppins:wght@600;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Fredoka:wght@600&amp;display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+body{
+   min-height:100vh;
+   background:black;
+}
+
+/* VIDEO DE FONDO */
+.video-fondo{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    z-index:-1;
+    transform: translateZ(0);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor{
+  width:100%;
+  max-width:480px;
+  margin:auto;
+  padding:30px 26px;
+}
+
+/* BLOQUES */
+.bloque{
+  margin:50px 0;
+}
+
+/* IMAGEN PERSONAJES */
+.personajes{
+  width:100%;
+  max-width:900px;
+}
+
+/* BOTONES */
+.boton{
+  display:block;
+  width:100%;
+  padding:16px;
+  margin:10px 0;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  background:#edb402;
+  color:#000000;
+}
+#botonMusica{
+  position:fixed;
+  top:18px;
+  right:18px;
+  width:52px;
+  height:52px;
+  border:none;
+  border-radius:999px;
+  font-size:20px;
+  cursor:pointer;
+  background:rgba(255,255,255,0.85);
+  color:#2f2561;
+  z-index:10;
+}
+.portada{
+  padding-top:60px;
+}
+
+.titulo{
+  font-size:36px;
+  line-height:1.2;
+  text-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+.nombre{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:52px;
+  display:block;
+  max-width:90%;
+  margin:0 auto 18px auto;
+  padding:0;
+  text-align:center;
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:normal;
+  line-height:0.85;
+  color:#ffffff;
+  -webkit-text-stroke: 1px rgba(0,0,0,0.85);
+  text-shadow:0 4px 12px rgba(0,0,0,0.65);
+  width:100%;
+  max-width:100%;
+  padding:0 14px;
+}
+
+.edad{
+  font-family:'Baloo 2', cursive;
+  font-size:26px;
+  letter-spacing:1px;
+  text-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+.liston{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 26px;
+  font-family:'Poppins', sans-serif;
+  font-size:22px;
+  font-weight:600;
+  color:white;
+  background: linear-gradient(90deg,#b79251,#ebd580);
+  border-radius:40px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+
+.numero{
+  font-weight:800;
+  font-size:28px;
+}
+.tarjeta-info{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:16px 18px;
+  background: linear-gradient(135deg,#000000,#464646);
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.22);
+}
+
+.fila-info{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  padding:10px 6px;
+}
+
+.icono-svg{
+  width:34px;
+  height:34px;
+  flex:0 0 34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.icono-svg svg{
+  width:100%;
+  height:100%;
+  fill:#ffffff;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.texto-info{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:28px;
+  letter-spacing:0.2px;
+  color:#ffffff;
+  line-height:0.85;
+  text-align:left;
+  flex:1;
+}
+.bloque-fecha{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:1.05;
+  flex:1;
+  min-width:0;
+}
+
+.dia{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:28px;
+  color:#ffffff;
+  letter-spacing:1px;
+}
+
+.fecha{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:24px;
+  color:#ffffff;
+  white-space:nowrap;
+}
+.bloque-hora{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  line-height:0.70;
+  flex:1;
+  min-width:0;
+}
+
+.hora-inicio{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:24px;
+  color:#ffffff;
+  white-space:nowrap;
+}
+
+.ubicacion-seccion{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-bottom:18px;
+  text-align:center;
+  line-height:1;
+}
+
+.nombre-lugar{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:26px;
+  color:#ffffff;
+  text-transform:uppercase;
+  padding:0 20px;
+  text-shadow:0 4px 12px rgba(0,0,0,0.35);
+  word-break:break-word;
+  overflow-wrap:break-word;
+  max-width:100%;
+}
+
+.frase{
+  padding:10px 10px;
+}
+
+.frase p{
+  font-family:'Fredoka', sans-serif;
+  font-weight:600;
+  font-size:24px;
+  line-height:1;
+  color:#ffffff;
+  max-width:90%;
+  margin:auto;
+  text-shadow:0 6px 16px rgba(0,0,0,0.55);
+}
+
+/* ===== FAMILIA (Papás + Padrinos) ===== */
+.familia{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:18px 18px;
+  background: rgba(0,0,0,0.85);
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.22);
+}
+.familia-titulo{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:18px;
+  letter-spacing:2px;
+  color:#edb402;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.familia-nombre{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:20px;
+  line-height:1.3;
+  color:#ffffff;
+}
+.familia-sep{
+  height:1px;
+  background:rgba(255,255,255,0.25);
+  margin:16px 30px;
+}
+
+/* ===== EXTRAS (Recordatorio + Regalo) ===== */
+.extras-grid{
+  max-width:420px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+  gap:12px;
+}
+
+@media (max-width:380px){
+  .extras-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.extra-card{
+  border-radius:20px;
+  padding:12px 12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-height:72px;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow:0 10px 22px rgba(0,0,0,0.16);
+  backdrop-filter: blur(6px);
+  max-width:100%;
+  overflow:hidden;
+}
+
+.extra-recordatorio{
+  background: rgba(243,178,8,0.78);
+}
+
+.extra-regalo{
+  background: rgba(29,23,87,0.88);
+}
+
+.extra-img{
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  object-fit:contain;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.20));
+}
+
+.extra-content{
+  flex:1;
+  min-width:0;
+}
+
+.extra-title{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#ffffff;
+  opacity:0.95;
+  text-align:left;
+}
+
+/* ===== CONTADOR REGRESIVO ===== */
+.contador{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  padding:16px 16px 14px 16px;
+  border-radius:22px;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid rgba(0,0,0,0.42);
+  box-shadow:0 12px 28px rgba(0,0,0,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.contador-titulo{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:20px;
+  letter-spacing:1px;
+  color:#ffffff;
+  opacity:0.95;
+  margin-bottom:10px;
+}
+
+.contador-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:8px;
+}
+
+.contador-item{
+  border-radius:18px;
+  padding:10px 8px;
+  background: rgba(237,180,2,0.85);
+  border: 1px solid rgba(0,0,0,1);
+  text-align:center;
+  min-width:0;
+}
+
+.contador-num{
+  font-family:'Poppins', sans-serif;
+  font-weight:900;
+  font-size:26px;
+  color:#000000;
+  line-height:1;
+}
+
+.contador-lbl{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:11px;
+  letter-spacing:1px;
+  color:#000000;
+  opacity:0.95;
+  margin-top:6px;
+}
+
+.contador-sub{
+  font-family:'Poppins', sans-serif;
+  font-weight:800;
+  font-size:16px;
+  color:#ffffff;
+  opacity:0.95;
+  margin-top:12px;
+  text-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
+.personajes{
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar{
+  0%{ transform: translateY(0px); }
+  50%{ transform: translateY(-15px); }
+  100%{ transform: translateY(0px); }
+}
+
+@media (max-width:320px){
+  .contador-grid{
+    grid-template-columns: repeat(4, 1fr);
+    gap:8px;
+  }
+}
+#iconoMusica{
+  font-family: Arial, sans-serif !important;
+  font-style: normal !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+/* ===== OVERLAY INICIO INVITACIÓN ===== */
+#overlayInicio{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.overlay-contenido{
+    text-align:center;
+    color:white;
+    position:relative;
+    z-index: 5;
+}
+
+/* PUERTAS */
+.puerta{
+  position:absolute;
+  top:0;
+  width:50%;
+  height:100%;
+  background-image:url("cover.jpg");
+  background-size:cover;
+  background-position:center;
+  transition:transform 1.2s ease-in-out;
+  z-index: 1;
+}
+
+.puerta-izq{
+  left:0;
+  background-position:left center;
+}
+
+.puerta-der{
+  right:0;
+  background-position:right center;
+}
+
+.abrir .puerta-izq{
+  transform:translateX(-100%);
+}
+
+.abrir .puerta-der{
+  transform:translateX(100%);
+}
+
+:root{
+  --color-boton: #d7af65;
+  --color-icono: #ffffff;
+  --color-texto-play: #ffffff;
+  --fuente-play: 'Montserrat', Arial, sans-serif;
+}
+
+#botonPlayGrande{
+  width:90px;
+  height:90px;
+  border-radius:30%;
+  background:var(--color-boton);
+  color:var(--color-icono);
+  font-size:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  cursor:pointer;
+  box-shadow:0 10px 40px rgba(0,0,0,.45);
+  transition:.3s;
+}
+
+#botonPlayGrande:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 50px rgba(0,0,0,.6);
+}
+
+.textoPlay{
+  margin-top:18px;
+  font-size:20px;
+  letter-spacing:1.5px;
+  font-weight:700;
+  color:var(--color-texto-play);
+  font-family:var(--fuente-play);
+  text-shadow:0 2px 8px rgba(0,0,0,.6);
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay="" muted="" loop="" playsinline class="video-fondo">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+<audio id="audioMusica" src="musica.mp3" loop=""></audio>
+
+<button id="botonMusica" aria-label="Música">
+  <span id="iconoMusica">▶</span>
+</button>
+
+<!-- OVERLAY PLAY INICIAL -->
+<div id="overlayInicio">
+
+  <div class="puerta puerta-izq"></div>
+  <div class="puerta puerta-der"></div>
+
+  <div class="overlay-contenido">
+    <p class="textoPlay">Toca para abrir<br>la invitación</p>
+    <div id="botonPlayGrande">▶</div>
+  </div>
+</div>
+
+<div class="contenedor">
+
+  <div class="bloque portada">
+    <img src="personajes.png" class="personajes">
+    <h1 class="nombre" id="nombre" style="font-size: 77px;">Alonso Valencia</h1>
+    <div class="liston">
+      Mis <span class="numero">XV</span> Años
+    </div>
+    <div class="scroll-indicador">
+      <span><b>Desliza ↓</b></span>
+    </div>
+  </div>
+
+  <div class="bloque frase">
+    <p id="leyenda">En un reino donde los sueños se hacen realidad y los cuentos cobran vida, hay corazones llenos de amor que celebran este día tan especial...</p>
+  </div>
+
+  <div class="bloque frase">
+    <p id="fraseEvento">TE ESPERAMOS, EN ESTE DÍA TAN ESPECIAL!!</p>
+  </div>
+
+  <!-- FECHA Y HORA -->
+  <div class="bloque">
+    <div class="tarjeta-info">
+      <div class="fila-info">
+        <span class="icono-svg">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h1V3a1 1 0 0 1 1-1Zm13 8H4v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V10ZM5 6a1 1 0 0 0-1 1v1h16V7a1 1 0 0 0-1-1H5Z"></path>
+          </svg>
+        </span>
+        <div class="bloque-fecha">
+          <span class="dia">SÁBADO</span>
+          <span class="fecha">26 DICIEMBRE</span>
+        </div>
+      </div>
+
+      <div class="fila-info">
+        <span class="icono-svg">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 11h4a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1V7a1 1 0 1 1 2 0v6Z"></path>
+          </svg>
+        </span>
+        <div class="bloque-hora" id="bloqueHora">
+          <span class="hora-inicio" id="horaInicio">05:30 PM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTADOR -->
+  <div class="bloque">
+    <div class="contador" id="contador" data-fecha="2026-12-26T17:30:00">
+      <div class="contador-titulo">FALTAN...</div>
+
+      <div class="contador-grid">
+        <div class="contador-item">
+          <div class="contador-num" id="cDias">00</div>
+          <div class="contador-lbl">DÍAS</div>
+        </div>
+        <div class="contador-item">
+          <div class="contador-num" id="cHoras">00</div>
+          <div class="contador-lbl">HRS</div>
+        </div>
+        <div class="contador-item">
+          <div class="contador-num" id="cMin">00</div>
+          <div class="contador-lbl">MIN</div>
+        </div>
+        <div class="contador-item">
+          <div class="contador-num" id="cSeg">00</div>
+          <div class="contador-lbl">SEG</div>
+        </div>
+      </div>
+
+      <div class="contador-sub" id="contadorSub">¡Nos vemos pronto!</div>
+    </div>
+  </div>
+
+  <div class="bloque bloque-personajes-2">
+    <img src="personajes2.png" class="personajes">
+  </div>
+
+  <!-- PAPÁS Y PADRINOS -->
+  <div class="bloque">
+    <div class="familia">
+      <div class="familia-titulo">Mis Papás</div>
+      <div class="familia-nombre">Gloria Mendoza<br>Antonio Valencia</div>
+
+      <div class="familia-sep"></div>
+
+      <div class="familia-titulo">Mis Padrinos</div>
+      <div class="familia-nombre">María G. García<br>Luis H. García</div>
+    </div>
+  </div>
+
+  <!-- MESA DE REGALOS -->
+  <div class="bloque extras">
+    <div class="extras-grid" id="extrasGrid">
+      <div class="extra-card extra-regalo" id="bloqueRegalo" data-regalo="sobre">
+        <img class="extra-img" id="imgRegalo" src="sobre.png" alt="Sugerencia de regalo">
+        <div class="extra-content">
+          <div class="extra-title">Mesa de Regalos</div>
+          <div class="extra-title">Tu presencia es mi mayor regalo Sin embargo, si deseas obsequiarme algo especial lo agradecería de corazón</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UBICACIÓN Y CONFIRMACIÓN -->
+  <div class="bloque">
+
+    <div class="ubicacion-seccion">
+      <span class="icono-svg">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"></path>
+        </svg>
+      </span>
+
+      <span class="nombre-lugar" id="lugar">Salón Algo Bolw</span>
+
+      <a href="https://maps.app.goo.gl/KQF3mdGwdmhbvdEWA" id="btnUbicacion" class="boton boton-mapa" target="_blank" rel="noopener">VER UBICACIÓN</a>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=+525579623081&text=Hola,%20confirmo%20mi%20asistencia%20a%20tu%20evento"
+       id="btnConfirmar" class="boton" target="_blank" rel="noopener">CONFIRMAR ASISTENCIA</a>
+
+  </div>
+
+</div>
+
+<script>
+window.addEventListener("load", () => {
+  const cont = document.getElementById("contador");
+  if(!cont) return;
+
+  const target = new Date(cont.getAttribute("data-fecha"));
+
+  const cDias = document.getElementById("cDias");
+  const cHoras = document.getElementById("cHoras");
+  const cMin = document.getElementById("cMin");
+  const cSeg = document.getElementById("cSeg");
+
+  function pad(n){ return String(n).padStart(2,"0"); }
+
+  function tick(){
+    const diff = target - new Date();
+
+    if(diff <= 0){
+      cDias.textContent = "00";
+      cHoras.textContent = "00";
+      cMin.textContent = "00";
+      cSeg.textContent = "00";
+      return;
+    }
+
+    const totalSec = Math.floor(diff/1000);
+    cDias.textContent = pad(Math.floor(totalSec / 86400));
+    cHoras.textContent = pad(Math.floor((totalSec % 86400) / 3600));
+    cMin.textContent = pad(Math.floor((totalSec % 3600) / 60));
+    cSeg.textContent = pad(totalSec % 60);
+  }
+
+  tick();
+  setInterval(tick,1000);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const bloque = document.getElementById("bloqueRegalo");
+  if(!bloque) return;
+
+  const tipo = (bloque.dataset.regalo || "").toLowerCase();
+  if(tipo === ""){
+    bloque.style.display = "none";
+  }
+});
+</script>
+
+<script>
+window.addEventListener("load", function(){
+  const nombre = document.getElementById("nombre");
+  if(!nombre) return;
+
+  function ajustarNombre(){
+    let maxWidth = nombre.parentElement.clientWidth;
+    let size = 110;
+    nombre.style.fontSize = size + "px";
+
+    while(nombre.scrollWidth > maxWidth){
+        size -= 1;
+        nombre.style.fontSize = size + "px";
+        if(size <= 28) break;
+    }
+
+    while(nombre.scrollWidth < maxWidth * 0.85){
+        size += 1;
+        nombre.style.fontSize = size + "px";
+        if(size >= 110) break;
+    }
+  }
+
+  ajustarNombre();
+  window.addEventListener("resize", ajustarNombre);
+});
+</script>
+
+<script>
+const audio = document.getElementById("audioMusica");
+const botonMusica = document.getElementById("botonMusica");
+const iconoMusica = document.getElementById("iconoMusica");
+const overlay = document.getElementById("overlayInicio");
+const botonPlayGrande = document.getElementById("botonPlayGrande");
+
+function actualizarIcono(){
+  iconoMusica.textContent = audio.paused ? "▶" : "♪";
+}
+
+// Abrir invitación + reproducir música
+botonPlayGrande.addEventListener("click", async () => {
+  botonPlayGrande.style.display = "none";
+  document.querySelector(".textoPlay").style.display = "none";
+
+  overlay.classList.add("abrir");
+
+  try{
+    audio.muted = false;
+    await audio.play();
+  }catch(e){}
+
+  actualizarIcono();
+
+  setTimeout(()=>{
+    overlay.style.display = "none";
+  },1200);
+});
+
+// Botón arriba derecha (play / pausa)
+botonMusica.addEventListener("click", async () => {
+  if(audio.paused){
+    try{ await audio.play(); }catch(e){}
+  }else{
+    audio.pause();
+  }
+  actualizarIcono();
+});
+
+actualizarIcono();
+</script>
+
+</body>
+</html>
